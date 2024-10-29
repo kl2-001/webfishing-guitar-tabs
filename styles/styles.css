@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeed5; /* Page background */
+    background-image: url('../images/background4.png'); /* Corrected the image path and added extension */
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image */
+    color: #6a4420; /* Text color */
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Center all text */
+    position: relative; /* Make the body a positioning context */
+    max-width: 100%; /* Make the width responsive */
+    margin: 0 auto; /* Center content */
+}
+
+
+h1 {
+    font-size: 50px; /* Bigger font size */
+    font-weight: bold; /* Make it bold */
+    margin: 20px auto; /* Add some space around it */
+    padding: 10px;
+/*    border: 3px solid #ffffff; /* White outline */*/
+    display: inline-block;
+    color: #6a4420; /* Text color */
+    background-color: transparent; /* No background color */
+}
+
+.character {
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */*/
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+ul li {
+    padding: 10px;
+    background: #ffeed5; /* New unselected button color */
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #44475a; /* Border with a dark color */
+    width: 150px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #6a4420; /* Text color */
+    display: block; /* Make the link fill the li */
+    padding: 10px; /* Add padding inside the link */
+}
+
+ul li a:hover {
+    background-color: #d5aa73; /* Hover color */
+    color: #6a4420; /* Text color */
+    border: 1px solid #d5aa73; /* Match border to hover color */
+}
+
+ul li a:active, ul li a:focus {
+    background-color: #6a4420; /* Selected color */
+    color: #ffeed5; /* Text color on selected background */
+    border: 1px solid #6a4420; /* Match border to selected color */
+}
+
+div img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #6272a4; /* Border to match the style */
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+pre {
+    background: #44475a; /* Matching the box style */
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+    font-family: "Courier New", Courier, monospace; /* Monospaced font for tabs */
+    color: #6a4420; /* Text color */
+    text-align: left; /* Align text inside pre */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #ffeed5; /* Beige background */
+    border: 1px solid #6a4420; /* Dark brown border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card img {
+    max-width: 80px; /* Limit the width of the album cover */
+    height: auto;
+    border-radius: 5px;
+    margin: 10px auto 20px; /* Separate from button */
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 10px auto 5px; /* Closer to top edge */
+    color: #6a4420;
+}
+
+.card-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #6a4420;
+}
+
+.card-link {
+    background: #6a4420;
+    color: #ffeed5;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.card-link:hover {
+    background: #d5aa73;
+}
+
+@media (max-width: 768px) {
+    .character {
+        max-width: 100px;
+        margin: 0 auto 20px; /* Center on smaller screens */
+        display: block;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-container {
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card-description {
+        font-size: 18px;
+    }
+}
